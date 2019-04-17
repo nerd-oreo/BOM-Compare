@@ -45,7 +45,7 @@ public class BOMComparison {
                     // Create a new component
                     Component component = new Component(level, number, description, quantity, ref_des);
                     sanminaBOM.addComponent(component);
-                    System.out.println(component.toString());
+                    //System.out.println(component.toString());
                 }
             } 
             

@@ -17,11 +17,11 @@ public class BOM {
         String uniId = null;
         
         if(comp.isTopLevel()) {
-            uniId = comp.getNumber();
+            uniId = comp.getLevel() + ":" + comp.getNumber();
             currentParent = comp;
         } else {
             // generate uniId based on parent and child part number
-            uniId = currentParent.getNumber() + ":" + comp.getNumber();
+            uniId = currentParent.getLevel() + ":" + currentParent.getNumber() + ":" + comp.getLevel() + ":" + comp.getNumber();
         }
         
         bom.put(uniId, comp);   // add component to BOM
